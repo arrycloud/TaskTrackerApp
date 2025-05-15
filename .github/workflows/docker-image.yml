@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+
+    runs-on: VM1
+
+    steps:
+    - name: Checkout to the workspace
+      uses: actions/checkout@v4
+      
+    - name: Show workspace
+      run: echo "Workspace is at $GITHUB_WORKSPACE"
+
+    - name: Removing the files from main location and then copying files from workspace
+      run: rm -rf /home/ayush/ExamWebApp/* && cp -r $GITHUB_WORKSPACE/* /home/ayush/ExamWebApp/
+
+    - name: Run the docker compose again
+      run: cd /home/ayush/ExamWebApp/ && docker compose up -d --build --force-recreate

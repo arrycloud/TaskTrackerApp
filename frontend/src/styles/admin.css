@@ -1,0 +1,310 @@
+/* admin dashboard */
+/* admin.css */
+.adheader {
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adsnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.adsnav img {
+  height: 50px;
+}
+
+.adnav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.adnav-links li {
+  position: relative;
+}
+
+.adnav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+
+.adnav-links a:hover {
+  background-color: #00264d;
+  border-radius: 5px;
+}
+
+.adsection {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.adcards {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.adcards:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
+}
+
+.adcards:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .adsnav img {
+    height: 40px;
+  }
+
+  .adnav-links a {
+    font-size: 16px;
+  }
+  .adsection {
+    margin: 20px;
+  }
+
+  .adcards {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adnav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .adsection {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add Question.css */
+
+form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="datetime-local"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid#333;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"]:focus {
+  border-color: #333;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #ccc;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  form {
+    padding: 30px;
+  }
+
+  form label {
+    font-size: 14px;
+  }
+
+  form input[type="text"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* AddExam.css */
+
+.aeform {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.aeform h2 {
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.aeform input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.aeform input:focus {
+  border-color: #333;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+  color: white;
+}
+button[type="submit"]:hover {
+  background-color: #333;
+  color: white;
+}
+
+button:last-of-type {
+  background-color: #333;
+  color: #fff;
+}
+
+button:last-of-type:hover {
+  background-color: #ccc;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .aeform {
+    padding: 30px;
+  }
+
+  .aeform input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aeform {
+    padding: 20px;
+  }
+
+  .aeform input {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Delete.jsx css */
+.deleteMainDiv {
+  height: 100vh;
+  margin-top: 4%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* add student */
+.imageStu,
+.demoImg {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-left: 35%;
+}
+.demoImg {
+  margin-left: 0px;
+}
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid#333;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
